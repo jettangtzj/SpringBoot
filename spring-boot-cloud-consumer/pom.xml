@@ -26,11 +26,14 @@
 	</properties>
 
 	<dependencies>
+		
+		<!-- eureka server -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
-
+		
+		<!-- robbon -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-ribbon</artifactId>
