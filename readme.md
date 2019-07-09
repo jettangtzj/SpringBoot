@@ -96,3 +96,16 @@ Actuator 具有以下特性：
 
 ## 总结
 简而言之，从本质上来说，Spring Boot就是Spring，它做了那些没有它你自己也会去做的Spring Bean配置。谢天谢地，幸好有Spring，你不用再写这些样板配置了，可以专注于应用程序的逻辑，这些才是应用程序独一无二的东西。
+
+
+#   Spring Cloud
+
+## 服务注册与发现 eureka
+
+## 服务提供者与服务消费者(rest + ribbon, Feign)
+
+## 断路器(Hystrix)
+
+## 路由网管(zuul)
+
+## 配置中心(Spring Cloud Config)
