@@ -12,6 +12,7 @@ public class SpringBootCloudConfigServerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootCloudConfigServerApplication.class, args);
+		System.out.println("=======config server========");
 	}
 
 }

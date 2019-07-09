@@ -10,6 +10,7 @@ public class SpringBootCloudConfigClientApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootCloudConfigClientApplication.class, args);
+		System.out.println("=======config client========");
 	}
 
 }
