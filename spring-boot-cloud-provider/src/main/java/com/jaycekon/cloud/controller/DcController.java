@@ -14,9 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DcController {
 
+	/**
+	 * 配置文件中的spring应用/服务名
+	 */
+	@Value("${spring.application.name}")
+	String springApplicationName;
 
 	/**
-	 * 定义一个本服务端口号的常量
+	 * 配置文件中设置的端口号
 	 */
     @Value("${server.port}")
     String port;
@@ -28,7 +33,9 @@ public class DcController {
      */
     @RequestMapping("/product")
     public String product(@RequestParam String name) {
-        return "hi "+name+",i am from port:" +port + " " + new Date();
+        return "hi "+name+",i am from port:" +port 
+        		+ "<br/>message transmit by " + springApplicationName 
+        		+ "<br/>time:" + new Date();
     }
 
 }
