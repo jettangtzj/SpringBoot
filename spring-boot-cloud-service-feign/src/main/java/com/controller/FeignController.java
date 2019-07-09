@@ -18,6 +18,7 @@ public class FeignController {
 	private FeignProviderService feignProviderService;
 	
 	/**
+	 * simple test
 	 * @GetMapping value 本应用的请求路径
 	 * @param name
 	 * @return
@@ -28,6 +29,7 @@ public class FeignController {
 	}
 	
 	/**
+	 * ribbon test
 	 * @GetMapping value 本应用的请求路径
 	 * @param name
 	 * @return
@@ -37,9 +39,21 @@ public class FeignController {
 		return feignConsumerService.ribbonTest(name);
 	}
 	
+	/**
+	 * hystrix test
+	 * @GetMapping value 本应用的请求路径
+	 * @param name
+	 * @return
+	 */
+	@GetMapping(value = "/feignhystrixtest")
+	public String feignHystrixTest(@RequestParam String name) {
+		return feignConsumerService.hystrixTest(name);
+	}
+	
 	
 	
 	/**
+	 * provider test
 	 * @GetMapping value 本应用的请求路径
 	 * @param name
 	 * @return

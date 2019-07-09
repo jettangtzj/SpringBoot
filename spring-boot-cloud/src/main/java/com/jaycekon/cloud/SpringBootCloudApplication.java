@@ -15,5 +15,7 @@ public class SpringBootCloudApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootCloudApplication.class, args);
+		System.out.println("=======eureka server========");
+		
 	}
 }

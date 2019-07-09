@@ -1,5 +1,6 @@
 package com.jaycekon.cloud;
 
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -14,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
  *
  */
 @SpringBootApplication
+@EnableAutoConfiguration
 @EnableDiscoveryClient
 @EnableHystrix
 public class SpringBootCloudConsumerApplication {
@@ -29,5 +31,7 @@ public class SpringBootCloudConsumerApplication {
 		new SpringApplicationBuilder(
 				SpringBootCloudConsumerApplication.class)
 				.web(true).run(args);
+		
+		System.out.println("=======consumer========");
 	}
 }

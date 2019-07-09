@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * FeignClient 请求的目标服务名或应用名
+ * FeignClient value请求的目标服务名或应用名 fallback错误处理的类
  * 
  * @author jettang
  *
  */
-@FeignClient(value = "eureka-client-simple-provider")
+@FeignClient(value = "eureka-client-simple-provider" , fallback= HystrixTestService.class)
 @Service
 public interface FeignProviderService {
 		

@@ -13,5 +13,8 @@ public class SpringBootCloudProviderApplication {
 		new SpringApplicationBuilder(
 				SpringBootCloudProviderApplication.class)
 				.web(true).run(args);
+		
+		System.out.println("=======provider========");
+		
 	}
 }

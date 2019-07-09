@@ -1,4 +1,4 @@
-package com.service;
+package com.jaycekon.cloud.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,7 +31,7 @@ public class HystrixTestService {
 	 * @return
 	 */
 	public String errorHandle(String name) {
-		return "Sorry, it has an error";
+		return "Hystrix: Sorry, it has an error";
 	}
 		
 }
