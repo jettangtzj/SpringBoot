@@ -15,18 +15,20 @@ public class DcController {
 
     @Autowired
     private RestTemplate restTemplate;
+    
+    //目标服务名或应用名
+    public final String targetName = "eureka-client-simple-provider";
 
     @GetMapping("/consumer")
     public String consumer(@RequestParam String name) {
-        String url = "http://eureka-client/product?name="+name;
+        String url = "http://"+targetName+"/product?name="+name;
 //        return new RestTemplate().getForObject(url, String.class);
         return restTemplate.getForObject(url, String.class);
     }
-
-
+    
     @GetMapping("/ribbon")
     public String ribbon(@RequestParam String name) {
-        return restTemplate.getForObject("http://eureka-client/product?name="+name, String.class);
+        return restTemplate.getForObject("http://"+targetName+"/product?name="+name, String.class);
     }
 
 

@@ -6,12 +6,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(value = "eureka-client")
+/**
+ * FeignClient 请求的目标服务名或应用名
+ * 
+ * @author jettang
+ *
+ */
+@FeignClient(value = "eureka-client-simple-provider")
 @Service
-public interface FeignService {
+public interface FeignProviderService {
 		
-	
+	/**
+	 * @RequestMapping value 目标的请求路径
+	 * @param name 传递的参数
+	 * @return
+	 */
 	@RequestMapping(value = "/product",method = RequestMethod.GET)
-	public String callName(@RequestParam(value = "name") String name);
+	public String productTest(@RequestParam(value = "name") String name);
+	
 	
 }
