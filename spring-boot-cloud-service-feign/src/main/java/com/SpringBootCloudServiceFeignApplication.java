@@ -1,5 +1,6 @@
 package com;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -17,10 +18,8 @@ import org.springframework.context.annotation.ComponentScan;
 public class SpringBootCloudServiceFeignApplication {
 
 	public static void main(String[] args) {
-
-		new SpringApplicationBuilder(
-				SpringBootCloudServiceFeignApplication.class)
-				.web(true).run(args);
+		
+		SpringApplication.run(SpringBootCloudServiceFeignApplication.class, args);
 		
 		System.out.println("=======service feign========");
 	}

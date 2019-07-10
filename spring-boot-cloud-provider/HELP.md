@@ -7,3 +7,8 @@
 
 
 
+## zipkin
+*   进行链路的跟踪
+*   启动java -jar zipkin-server-2.9.4-exec.jar
+
+

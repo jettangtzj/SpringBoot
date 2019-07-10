@@ -15,3 +15,8 @@
 ## Hystrix
 *  是一种断路器，当微服务中目标的服务不可用时，提供@HystrixCommand的fallbackMethod和@Hystrix的fallback提供错误处理的解决方案
 
+
+## zipkin
+*   进行链路的跟踪
+*   启动java -jar zipkin-server-2.9.4-exec.jar
+
