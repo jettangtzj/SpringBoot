@@ -1,18 +1,17 @@
 package com.jaycekon.cloud;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
 
 @SpringBootApplication
 @EnableDiscoveryClient
 public class SpringBootCloudProviderApplication {
 
 	public static void main(String[] args) {
-
-		new SpringApplicationBuilder(
-				SpringBootCloudProviderApplication.class)
-				.web(true).run(args);
+		
+		SpringApplication.run(SpringBootCloudProviderApplication.class, args);
 		
 		System.out.println("=======provider========");
 		
