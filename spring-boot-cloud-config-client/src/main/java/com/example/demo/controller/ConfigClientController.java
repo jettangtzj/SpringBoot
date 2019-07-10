@@ -32,4 +32,16 @@ public class ConfigClientController {
 				+ "<br/> local config file record:" + systemConfig.getTestcontent();
 	}
 	
+	@RequestMapping(value = "/loadServerConfig")
+	public String loadServerConfig() {
+		return "ServerConfig:username=" + username + 
+				"<br/>"  + "password="+password + 
+				"<br/>" + "ip=" + ip;
+	}
+	
+	@RequestMapping(value = "/loadLocalConfig")
+	public String loadLocalConfig() {
+		return "<br/> local config file record:" + systemConfig.getTestcontent();
+	}
+	
 }

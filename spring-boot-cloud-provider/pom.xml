@@ -39,10 +39,10 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-zipkin -->
+        <!--zipkin -->
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-zipkin</artifactId>
+		    <artifactId>spring-cloud-sleuth-zipkin</artifactId>
 		</dependency>
         
 		<dependency>
