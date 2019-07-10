@@ -1,0 +1,58 @@
+2019-07-08 14:45:40,892 [myid:] - INFO  [main:QuorumPeerConfig@133] - Reading configuration from: /Users/jettang/Downloads/zookeeper/bin/../conf/zoo.cfg
+2019-07-08 14:45:40,896 [myid:] - WARN  [main:VerifyingFileFactory@59] - ~/Downloads/zookeeperData is relative. Prepend ./ to indicate that you're sure!
+2019-07-08 14:45:40,897 [myid:] - INFO  [main:QuorumPeerConfig@385] - clientPortAddress is 0.0.0.0/0.0.0.0:2181
+2019-07-08 14:45:40,898 [myid:] - INFO  [main:QuorumPeerConfig@389] - secureClientPort is not set
+2019-07-08 14:45:40,900 [myid:] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2019-07-08 14:45:40,900 [myid:] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2019-07-08 14:45:40,900 [myid:] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2019-07-08 14:45:40,900 [myid:] - WARN  [main:QuorumPeerMain@125] - Either no config or no quorum defined in config, running  in standalone mode
+2019-07-08 14:45:40,902 [myid:] - INFO  [main:ManagedUtil@46] - Log4j found with jmx enabled.
+2019-07-08 14:45:40,915 [myid:] - INFO  [main:QuorumPeerConfig@133] - Reading configuration from: /Users/jettang/Downloads/zookeeper/bin/../conf/zoo.cfg
+2019-07-08 14:45:40,915 [myid:] - WARN  [main:VerifyingFileFactory@59] - ~/Downloads/zookeeperData is relative. Prepend ./ to indicate that you're sure!
+2019-07-08 14:45:40,915 [myid:] - INFO  [main:QuorumPeerConfig@385] - clientPortAddress is 0.0.0.0/0.0.0.0:2181
+2019-07-08 14:45:40,915 [myid:] - INFO  [main:QuorumPeerConfig@389] - secureClientPort is not set
+2019-07-08 14:45:40,915 [myid:] - INFO  [main:ZooKeeperServerMain@117] - Starting server
+2019-07-08 14:45:41,102 [myid:] - INFO  [main:Environment@109] - Server environment:zookeeper.version=3.5.5-390fe37ea45dee01bf87dc1c042b5e3dcce88653, built on 05/03/2019 12:07 GMT
+2019-07-08 14:45:41,103 [myid:] - INFO  [main:Environment@109] - Server environment:host.name=192.168.0.135
+2019-07-08 14:45:41,104 [myid:] - INFO  [main:Environment@109] - Server environment:java.version=1.8.0_191
+2019-07-08 14:45:41,104 [myid:] - INFO  [main:Environment@109] - Server environment:java.vendor=Oracle Corporation
+2019-07-08 14:45:41,105 [myid:] - INFO  [main:Environment@109] - Server environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre
+2019-07-08 14:45:41,105 [myid:] - INFO  [main:Environment@109] - Server environment:java.class.path=/Users/jettang/Downloads/zookeeper/bin/../zookeeper-server/target/classes:/Users/jettang/Downloads/zookeeper/bin/../build/classes:/Users/jettang/Downloads/zookeeper/bin/../zookeeper-server/target/lib/*.jar:/Users/jettang/Downloads/zookeeper/bin/../build/lib/*.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/zookeeper-jute-3.5.5.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/zookeeper-3.5.5.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/slf4j-log4j12-1.7.25.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/slf4j-api-1.7.25.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/netty-all-4.1.29.Final.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/log4j-1.2.17.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/json-simple-1.1.1.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/jline-2.11.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/jetty-util-9.4.17.v20190418.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/jetty-servlet-9.4.17.v20190418.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/jetty-server-9.4.17.v20190418.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/jetty-security-9.4.17.v20190418.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/jetty-io-9.4.17.v20190418.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/jetty-http-9.4.17.v20190418.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/javax.servlet-api-3.1.0.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/jackson-databind-2.9.8.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/jackson-core-2.9.8.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/jackson-annotations-2.9.0.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/commons-cli-1.2.jar:/Users/jettang/Downloads/zookeeper/bin/../lib/audience-annotations-0.5.0.jar:/Users/jettang/Downloads/zookeeper/bin/../zookeeper-*.jar:/Users/jettang/Downloads/zookeeper/bin/../zookeeper-server/src/main/resources/lib/*.jar:/Users/jettang/Downloads/zookeeper/bin/../conf:
+2019-07-08 14:45:41,105 [myid:] - INFO  [main:Environment@109] - Server environment:java.library.path=/Users/jettang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2019-07-08 14:45:41,105 [myid:] - INFO  [main:Environment@109] - Server environment:java.io.tmpdir=/var/folders/7q/5hzfsjpd6t17tzzv_3yybtk40000gn/T/
+2019-07-08 14:45:41,105 [myid:] - INFO  [main:Environment@109] - Server environment:java.compiler=<NA>
+2019-07-08 14:45:41,106 [myid:] - INFO  [main:Environment@109] - Server environment:os.name=Mac OS X
+2019-07-08 14:45:41,106 [myid:] - INFO  [main:Environment@109] - Server environment:os.arch=x86_64
+2019-07-08 14:45:41,106 [myid:] - INFO  [main:Environment@109] - Server environment:os.version=10.14.3
+2019-07-08 14:45:41,106 [myid:] - INFO  [main:Environment@109] - Server environment:user.name=jettang
+2019-07-08 14:45:41,106 [myid:] - INFO  [main:Environment@109] - Server environment:user.home=/Users/jettang
+2019-07-08 14:45:41,106 [myid:] - INFO  [main:Environment@109] - Server environment:user.dir=/Users/jettang/Downloads/zookeeper
+2019-07-08 14:45:41,106 [myid:] - INFO  [main:Environment@109] - Server environment:os.memory.free=235MB
+2019-07-08 14:45:41,106 [myid:] - INFO  [main:Environment@109] - Server environment:os.memory.max=889MB
+2019-07-08 14:45:41,106 [myid:] - INFO  [main:Environment@109] - Server environment:os.memory.total=245MB
+2019-07-08 14:45:41,109 [myid:] - INFO  [main:ZooKeeperServer@938] - minSessionTimeout set to 4000
+2019-07-08 14:45:41,109 [myid:] - INFO  [main:ZooKeeperServer@947] - maxSessionTimeout set to 40000
+2019-07-08 14:45:41,110 [myid:] - INFO  [main:ZooKeeperServer@166] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir ~/Downloads/zookeeperData/version-2 snapdir ~/Downloads/zookeeperData/version-2
+2019-07-08 14:45:41,146 [myid:] - INFO  [main:Log@193] - Logging initialized @769ms to org.eclipse.jetty.util.log.Slf4jLog
+2019-07-08 14:45:41,238 [myid:] - WARN  [main:ContextHandler@1588] - o.e.j.s.ServletContextHandler@1e397ed7{/,null,UNAVAILABLE} contextPath ends with /*
+2019-07-08 14:45:41,238 [myid:] - WARN  [main:ContextHandler@1599] - Empty contextPath
+2019-07-08 14:45:41,248 [myid:] - INFO  [main:Server@370] - jetty-9.4.17.v20190418; built: 2019-04-18T19:45:35.259Z; git: aa1c656c315c011c01e7b21aabb04066635b9f67; jvm 1.8.0_191-b12
+2019-07-08 14:45:41,277 [myid:] - INFO  [main:DefaultSessionIdManager@365] - DefaultSessionIdManager workerName=node0
+2019-07-08 14:45:41,277 [myid:] - INFO  [main:DefaultSessionIdManager@370] - No SessionScavenger set, using defaults
+2019-07-08 14:45:41,279 [myid:] - INFO  [main:HouseKeeper@149] - node0 Scavenging every 660000ms
+2019-07-08 14:45:41,286 [myid:] - INFO  [main:ContextHandler@855] - Started o.e.j.s.ServletContextHandler@1e397ed7{/,null,AVAILABLE}
+2019-07-08 14:45:41,308 [myid:] - INFO  [main:AbstractConnector@292] - Started ServerConnector@32d992b2{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2019-07-08 14:45:41,308 [myid:] - INFO  [main:Server@410] - Started @939ms
+2019-07-08 14:45:41,308 [myid:] - INFO  [main:JettyAdminServer@112] - Started AdminServer on address 0.0.0.0, port 8080 and command URL /commands
+2019-07-08 14:45:41,314 [myid:] - INFO  [main:ServerCnxnFactory@135] - Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory
+2019-07-08 14:45:41,317 [myid:] - INFO  [main:NIOServerCnxnFactory@673] - Configuring NIO connection handler with 10s sessionless connection timeout, 2 selector thread(s), 24 worker threads, and 64 kB direct buffers.
+2019-07-08 14:45:41,318 [myid:] - INFO  [main:NIOServerCnxnFactory@686] - binding to port 0.0.0.0/0.0.0.0:2181
+2019-07-08 14:45:41,330 [myid:] - INFO  [main:ZKDatabase@117] - zookeeper.snapshotSizeFactor = 0.33
+2019-07-08 14:45:41,332 [myid:] - INFO  [main:FileTxnSnapLog@372] - Snapshotting: 0x0 to ~/Downloads/zookeeperData/version-2/snapshot.0
+2019-07-08 14:45:41,335 [myid:] - INFO  [main:FileTxnSnapLog@372] - Snapshotting: 0x0 to ~/Downloads/zookeeperData/version-2/snapshot.0
+2019-07-08 14:45:41,347 [myid:] - INFO  [main:ContainerManager@64] - Using checkIntervalMs=60000 maxPerMinute=10000
+2019-07-08 14:45:41,627 [myid:] - INFO  [SyncThread:0:FileTxnLog@216] - Creating new log file: log.1
+2019-07-08 14:46:31,098 [myid:] - WARN  [NIOWorkerThread-3:NIOServerCnxn@366] - Unable to read additional data from client sessionid 0x100969c10a20001, likely client has closed socket
+2019-07-08 14:46:53,066 [myid:] - INFO  [SessionTracker:ZooKeeperServer@398] - Expiring session 0x100969c10a20001, timeout of 30000ms exceeded
+2019-07-08 14:51:52,579 [myid:] - WARN  [NIOWorkerThread-10:NIOServerCnxn@366] - Unable to read additional data from client sessionid 0x100969c10a20003, likely client has closed socket
+2019-07-08 14:52:21,070 [myid:] - INFO  [SessionTracker:ZooKeeperServer@398] - Expiring session 0x100969c10a20003, timeout of 30000ms exceeded
