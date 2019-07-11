@@ -17,6 +17,10 @@ http://localhost:2019/producttest?name=jettang
 *   可根据情况实现多个FeignClient
 
 
+## Hystrix监控
+通过@EnableHystrixDashboard、@EnableCircuitBreaker进行启用，application.properties中需要配置相关的管理内容
+访问http://localhost:2019/hystrix
+输入http://localhost:2019/actuator/hystrix.stream、2000、miya确定
 
 
 
