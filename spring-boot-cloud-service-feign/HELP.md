@@ -12,7 +12,7 @@ http://localhost:2019/producttest?name=jettang
 ### feign
 ####    通过@EnableFeignClients、@FeignClient(value）方式实现feign的客户端功能，@RequestMapping实现目标服务的请求地址
 *   使用http://localhost:2019/feigntest?name=jettang
-*   feign同时支持Hystrix，处理fallback
+*   feign同时支持Hystrix，处理fallback，但是如果需要使用Hystrix dashboard，需要添加hystrix的jar包
 *   支持ribbon
 *   可根据情况实现多个FeignClient
 
@@ -20,7 +20,7 @@ http://localhost:2019/producttest?name=jettang
 ## Hystrix监控
 通过@EnableHystrixDashboard、@EnableCircuitBreaker进行启用，application.properties中需要配置相关的管理内容
 访问http://localhost:2019/hystrix
-输入http://localhost:2019/actuator/hystrix.stream、2000、miya确定
+输入http://localhost:2019/actuator/hystrix.stream、2000、test确定
 
 
 
