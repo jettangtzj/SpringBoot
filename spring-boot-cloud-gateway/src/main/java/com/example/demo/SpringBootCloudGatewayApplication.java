@@ -9,6 +9,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.filter.HostAddrKeyResolver;
+import com.example.demo.filter.RequestTimeFilter;
+import com.example.demo.filter.TokenFilter;
+
 import reactor.core.publisher.Mono;
 
 @SpringBootApplication
@@ -22,7 +26,7 @@ public class SpringBootCloudGatewayApplication {
 	}
 	
 	/**
-	 * 定义路由
+	 * 定义路由/get 或 /testHystrix 的请求路径会被进行路由处理
 	 * @param builder
 	 * @return
 	 */
@@ -32,7 +36,7 @@ public class SpringBootCloudGatewayApplication {
         return builder.routes()
             .route(p -> p
                 .path("/get")
-                .filters(f -> f.addRequestHeader("Hello", "World"))
+                .filters(f -> f.filter(new RequestTimeFilter()).addRequestHeader("Hello", "World"))
                 .uri(httpUri))
             .route(p -> p
             		.path("/testHystrix")
@@ -48,5 +52,24 @@ public class SpringBootCloudGatewayApplication {
 	public Mono<String> fallback() {
 		return Mono.just("fallback");
 	}
+	
+	/**
+	 * 全局filter
+	 * @return
+	 */
+	@Bean
+	public TokenFilter tokenFilter(){
+	        return new TokenFilter();
+	}
+	
+	/**
+	 * 限流filter
+	 * @return
+	 */
+	@Bean
+    public HostAddrKeyResolver hostAddrKeyResolver() {
+        return new HostAddrKeyResolver();
+    }
+
 	
 }

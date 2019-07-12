@@ -1,0 +1,161 @@
+server:
+  port: 2021
+
+
+spring:
+  application:
+    name: service-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+---
+#当请求的时间在这个配置的时间之后，请求会被路由到http://localhost:2019/feigntest?name=jettang
+
+spring:
+  profiles:
+    active:
+    - after_route
+    
+---
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: after_route
+        uri: http://localhost:2019/feigntest?name=jettang
+        predicates:
+        - After=2019-07-12T12:42:47.789-07:00[America/Denver]
+  profiles: after_route
+
+---
+#当请求的Header中有X-Request-Id的header名，且header值为数字时，请求会被路由到配置的 uri
+#filter里面使用AddRequestHeader增加了名为test，值为yes的header
+#执行curl -H 'X-Request-Id:1' localhost:2021
+
+spring:
+  profiles:
+    active: header_route
+
+---
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: header_route
+        uri: http://localhost:2019/feignribbontest?name=jettang
+        filters:
+        - AddRequestHeader=test, yes
+        predicates:
+        - Header=X-Request-Id, \d+
+  profiles: header_route
+
+---
+#请求带有cookie名为test, cookie值为yes 的请求将都会转发到uri
+#执行curl -H 'Cookie:test=yes' localhost:2021
+
+spring:
+  profiles:
+    active: cookie_route
+---
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: cookie_route
+        uri: http://localhost:2019/feignhystrixtest?name=jettang
+        predicates:
+        - Cookie=test, yes
+  profiles: cookie_route
+
+---
+#请求头中含有Host为fangzhipeng.com的请求将会被路由转发转发到配置的uri
+#filters RequestRateLimiter限流过滤器需要配合redis使用
+#执行  curl -H 'Host:www.test.com' localhost:2021
+
+spring:
+  profiles:
+    active: host_route
+---
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: host_route
+        uri: http://localhost:2019/producttest?name=jettang
+        predicates:
+        - Host=**.test.com
+        filters:
+        - name: RequestRateLimiter
+          args:
+            key-resolver: '#{@hostAddrKeyResolver}' ##用于限流的键的解析器的 Bean 对象的名字
+            redis-rate-limiter.replenishRate: 1 ##令牌桶每秒填充平均速率
+            redis-rate-limiter.burstCapacity: 3 ##令牌桶总容量
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    
+  profiles: host_route
+  
+  
+---
+#所有的POST类型的请求都会路由转发到配置的uri
+#执行 curl -XPOST localhost:2021
+
+spring:
+  profiles:
+    active: method_route
+
+---
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: method_route
+        uri: http://localhost:2018/consumer?name=jettang
+        predicates:
+        - Method=POST
+  profiles: method_route
+---
+#所有的请求路径满足/foo/{segment}的请求将会匹配并被路由
+#执行 curl localhost:2021/foo/test
+
+spring:
+  profiles:
+    active: path_route
+---
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: path_route
+        uri: http://localhost:2018/ribbon?name=jettang
+        predicates:
+        - Path=/foo/{segment}
+  profiles: path_route
+---
+#配置了请求中含有参数name，并且name的值匹配jet*，则请求命中路由
+#执行 curl localhost:2021?name=jettang
+
+spring:
+  profiles:
+    active: query_route
+---
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: query_route
+        uri: http://localhost:2018/hystrixTest?name=jettang
+        predicates:
+        - Query=name, jet*
+  profiles: query_route
+
+
+
+
